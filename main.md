@@ -6,7 +6,7 @@
 
 ### **Q: First problem - what will be logged?**
 
-[https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=1-problem.js](https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=1-problem.js)
+[https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=1.js](https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=1.js)
 
 ```jsx
 const object = {
@@ -27,7 +27,7 @@ setTimeout(object.logMessage, 1000);
 
 ### **Q: Second problem - what will be logged? Compare result from Pet and Party?**
 
-[https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=2-problem.js](https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=2-problem.js)
+[https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=2.js](https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=2.js)
 
 ```jsx
 function Pet(name) {
@@ -93,7 +93,7 @@ A click event callback is placed in the macrotask queue (also called the task qu
 
 ### **Q: What order will be for console.log**
 
-[https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=3-problem.js](https://stackblitz.com/edit/stackblitz-starters-gn8b6iwr?file=3-problem.js)
+[https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=3.js](https://stackblitz.com/edit/stackblitz-starters-v6dl7gjh?file=3.js)
 
 ```jsx
 console.log(1);
