@@ -308,4 +308,6 @@ They should identify:
 
 [Dependency Injection](dependency-injection.md)
 
+[Project Complexity](project-complexity.md)
+
 [RxJs](RxJs.md)
