@@ -197,6 +197,55 @@ type testCase4 = Expect<Equal<test4, { content: string; keywords: string[] }>>;
 type DataType<T> = T extends {data: infer Res} ? Res : undefined;
 ```
 
+### **Q: Create type which will restrict object properties with Region union?**
+
+[https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=region.ts](https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=region.ts)
+
+```tsx
+type Region = 'north' | 'south' | 'east' | 'west';
+
+type RegionalForecasts = TODO;
+
+export const forecasts: RegionalForecasts = {
+  north: {
+    temperature: -5,
+    precipitation: 30,
+  },
+  south: {
+    temperature: 20,
+    precipitation: 10,
+  },
+  east: {
+    temperature: 15,
+    precipitation: 20,
+  },
+  west: {
+    temperature: 10,
+    precipitation: 40,
+  },
+  // @ts-expect-error: "central" is not an allowed region.
+  central: {
+    temperature: 12,
+    precipitation: 25,
+  },
+};
+```
+
+**Answer:**
+
+```tsx
+  type RegionalForecasts = {
+    [K in Region]: {
+      temperature: number,
+      precipitation: number;
+    }
+  }
+
+  OR
+
+  type RegionalForecasts = Record<Region, { temperature: number, precipitation: nuber;}>
+```
+
 ---
 
 ## Authentication
