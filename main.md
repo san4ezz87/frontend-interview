@@ -166,6 +166,57 @@ function throttle(func, delay) {
 
 ## TypeScript
 
+### **Q: Given the User type, implement Result so it matches Expected — which includes only id, name, and options with just the role field**
+
+[https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=ExtractFields.ts](https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=ExtractFields.ts)
+
+```tsx
+/* ----------------------------------------
+  🧩 Problem: Extract Fields
+  📄 Description: Given a type `T` and a union of keys `K`,
+     build a new type that contains ONLY those keys from `T`.
+------------------------------------------ */
+
+type Prettify<T> = {
+  [K in keyof T]: T[K];
+} & {};
+
+// 🧪 Test case
+type User = {
+  id: number;
+  name: string;
+  options: {
+    role: 'admin' | 'manager';
+    isLogedin: boolean;
+  };
+  lever: number;
+};
+
+// ✅ TODO: implement it
+type Result = TODO;
+
+type Expected = {
+  id: number;
+  name: string;
+  options: {
+    role: 'admin' | 'manager';
+  };
+};
+
+type Test = Expect<Equal<Result, Expected>>;
+
+```
+
+**Answer:**
+
+```tsx
+type Result = Prettify<
+  Pick<User, 'id' | 'name'> & {
+    options: Pick<User['options'], 'role'>;
+  }
+>;
+```
+
 ### **Q: Create a utility type to extract the type of the 'data'?**
 
 [https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=data-type.ts](https://stackblitz.com/edit/stackblitz-starters-d3kwju6q?file=data-type.ts)
