@@ -2,6 +2,13 @@
 
 ---
 
+## Closures
+
+### **Q: What are closures?**
+
+**Answer:**
+Preserving the outer context inside a function.
+
 ## This Binding
 
 ### **Q: First problem - what will be logged?**
